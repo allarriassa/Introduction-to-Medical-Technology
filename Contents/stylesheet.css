@@ -1,0 +1,94 @@
+html{
+	scroll-behavior: smooth;
+	background-color: white;
+	color: white;
+	background-image: url('bg1.jpeg');
+	background-size: 100%;
+	font-family: Monospace;
+}
+
+html a:hover {
+	color: red;
+}
+
+header {
+	text-align: center;
+	background: rgba(7, 201, 255, 0.32);
+}
+
+h1{
+	color: white;
+	font-size: 30px;
+	margin-bottom:20px;
+	background: rgba(7, 201, 255, 0.5);
+}
+
+h4{
+	color: white;
+	font-size: 50px;
+	font-family: Monospace;
+	border: solid 5px white;
+	border-style: none none none none;
+	margin-top:10px;
+	padding: 2px;
+}
+
+nav{
+	padding: 7px;
+	border: solid 3px white;
+}
+
+a{
+	margin: 11px;
+	color: black;
+	font-family: Monospace;
+	font-size: 13px;
+	text-decoration: none;
+	background:rgba(7, 201, 255, 0.5); 
+}
+
+
+section {
+	padding:5px;
+	margin-top:80px;
+	margin-bottom: 120px;
+}
+
+article{
+	padding: 2px;
+} 
+
+p{
+	color: white;
+	padding:5px;
+	border: solid 3px rgba(9, 90, 84, 1);
+	margin-top:0px;
+	margin-bottom: 20px;
+	background: rgba(7, 201, 255, 0.7);	
+	text-align: justify;
+}
+
+.sprite {
+	background: url('ball.png') -9px -10px;
+	width: 3050px;
+	height: 80px;
+	animation: varName 5s steps(36) infinite;
+	zoom: .4;
+}
+@keyframes varName{
+ from{background-position-x:-8px;}
+ to{background-position-x:-3509px;}
+ }
+
+.sprite1 {
+	background: url('ball.png') -9px -10px;
+	width: 2100px;
+	height: 80px;
+	animation: varName 5s steps(36) infinite;
+	zoom: .3;
+}
+@keyframes varName{
+ from{background-position-x:-8px;}
+ to{background-position-x:-3509px;}
+ }
+

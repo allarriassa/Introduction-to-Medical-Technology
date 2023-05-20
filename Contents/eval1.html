@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		
+		<form id = "admission" onsubmit="return print();">
+		<label for="name">Name</label>
+		<input type ="text" name="name" id="name"><br><br>
+		
+		<P> Was the website helpful? </p>
+		<label for="e">Yes</label>
+		<input type="checkbox" id="e" name="used" value="Yes"><br><br>
+		<label for="un">No</label>
+		<input type="checkbox" id="un" name="used" value="No"><br><br>
+		
+		<label for="day">From 1-10, how would you rate this site?</label>
+		<input type="number" name="day" id="day"><br><br>
+		
+		<label for="re">What did you learn from the site?</label><br>
+		<textarea type="text" id="lesson" name= "lesson"></textarea><br><br>
+		
+		<fieldset form>
+		<legend>PARTS OF THE SITE</legend>
+		
+		<label for="cs">Defintion</label>
+		<input type="checkbox" value="Definition" name="sub"><br><br>
+		
+		<label for="P6">History</label>
+		<input type="checkbox" value="History" name="sub"><br><br>
+		
+		<label for="chem">Purpose</label>
+		<input type="checkbox" value="Purpose" name="sub"><br><br>
+		
+		<label for="st">Materials</label>
+		<input type="checkbox" value="Materials" name="sub"><br><br>
+		
+		<input type="submit"> </input><br>
+		</fieldset>
+		</form>
+		<p id = "ichi">Name: </p>
+        <p id = "nii">Rating:</p>
+        <p id = "san">Lessons:</p>
+        <p id = "shii">Helpfulness:</p>
+        <p id = "go">Parts Read:</p>
+		
+	<br><hr/>
+		
+	<footer>
+		This webpage is a Computer Science Project made by Lara Tiu, g9 Sodium.
+		<br>
+		
+		<p> Thank You! </p>
+
+	</footer>
+		
+        <script>
+           function print(){
+                var name = document.getElementById("name").value;
+                var days = document.getElementById("day").value;
+                var lesson = document.getElementById("lesson").value;
+                var help = document.getElementsByName("used");
+                var whoopie = document.getElementsByName("sub");
+
+                var doo = "";
+                for (var x = 0; x < help.length; x++)  {
+                    if (help[x].checked)  {
+                        doo = help[x].value;
+                    }
+                }
+				
+                var whippie = [];
+                for (var y = 0; y < whoopie.length; y++)  {
+                    if (whoopie[y].checked)  {
+                        whippie.push(whoopie[y].value);
+                    }
+                }
+
+                document.getElementById("ichi").innerHTML = "Name: " + name;
+                document.getElementById("nii").innerHTML = "Rating: " + days;
+                document.getElementById("san").innerHTML = "Lessons: " + lesson;
+                
+                if (doo !== "Yes")  {
+                    document.getElementById("shii").innerHTML = "Helpfulness: No";
+                }
+                else  {
+                    document.getElementById("shii").innerHTML = "Helpfulness: Yes";
+                }
+
+                if (whippie.length != 0)  {
+                    document.getElementById("go").innerHTML = "Parts Read: " + whippie.join(", ");
+                }
+                else  {
+                    document.getElementById("go").innerHTML = "Parts Read: None";
+                }
+
+                return false;
+            }
+		</script>
+	</body>
+</html>
